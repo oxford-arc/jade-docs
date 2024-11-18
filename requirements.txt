@@ -1,5 +1,0 @@
-docutils==0.17.1
-sphinx==5.0.2 # 1.5.3 should be same version as currently used by ReadTheDocs
-sphinx-rtd-theme==1.0.0
-
-

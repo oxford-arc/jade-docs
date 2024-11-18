@@ -2,7 +2,7 @@ JADE@ARC Facility User guide
 ############################
 
 .. image:: images/AMD-MI300X.png
-   :width: 512px
+   :width: 40%
    :align: right
    :alt: A picture showing some of the Jade hardware.
 

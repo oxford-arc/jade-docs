@@ -26,14 +26,14 @@ JADE\@ARC Hardware
 
 JADE\@ARC hardware consists of:
 
-* 3 Lenovo ThinkSystem SR685a V3 Nodes, each with
+- 3 Lenovo ThinkSystem SR685a V3 Nodes, each with
 
-  * 2 AMD EPYC 9534 64-Core CPUs and
-  * 8 AMD MI300X GPUs
+  - 2 AMD EPYC 9534 64-Core CPUs and
+  - 8 AMD MI300X GPUs
 
-* 2 Login nodes
-* Mellanox NDR networking
-* 32TB of local SSD scratch storage per node
+- 2 Login nodes
+- Mellanox NDR networking
+- 32TB of local SSD scratch storage per node
 
 
 .. toctree::

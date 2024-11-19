@@ -5,12 +5,12 @@ import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
 # General information about the project.
-project = u'JADE'
+project = u'JADE@ARC'
 copyright = u'2017-2024, JADE Tier 2 Centre'
 author = u'The ARC Team'
 
-version = u'0.1'
-release = u'0.1.0-beta'
+version = u''
+release = u''
 
 # -- General configuration ------------------------------------------------
 

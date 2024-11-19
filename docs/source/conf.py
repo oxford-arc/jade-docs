@@ -75,6 +75,7 @@ html_logo = 'images/jade_logo_small.png'
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'JADEARCdoc'
 
+html_show_sphinx = False
 
 # -- Options for LaTeX output ---------------------------------------------
 

@@ -6,6 +6,14 @@
     color: #000;
 }
 
+.wy-nav-top {
+    color: #77b900; 
+}
+
+.rst-content>a {
+    color: #77b900;
+}
+
 .wy-side-nav-search input[type=text]{
     border-color: #343131;
 }

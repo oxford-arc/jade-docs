@@ -7,10 +7,10 @@
 }
 
 .wy-nav-top {
-    color: #77b900; 
+    background-color: #77b900; 
 }
 
-.rst-content>a {
+.rst-content a {
     color: #77b900;
 }
 

@@ -54,6 +54,10 @@ todo_include_todos = False
 
 html_theme = 'jade'
 html_theme_path = ['themes'] 
+html_theme_options = {
+    'version_selector': False,
+    'language_selector': False,
+}
 
 # On RTD The custom theme is ignored so we must manually load all css files  
 on_rtd = os.environ.get('READTHEDOCS', None) == 'True'                              

@@ -42,5 +42,3 @@ JADE\@ARC hardware consists of:
 
    jade/index
    software/index
-   more_info
-   troubleshooting

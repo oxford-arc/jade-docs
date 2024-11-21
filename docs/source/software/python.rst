@@ -22,26 +22,26 @@ need.
 Using standard Python
 ---------------------
 
-Standard Python 2 and 3 are available to be loaded as a module: ::
+Standard Python 3 is available to be loaded as a module: ::
 
-  python2/2.7.14
-  python3/3.6.3
+  Python/3.12.3-GCCcore-13.3.0
+  
 
-Use the ``module load`` command to load a particular version of python e.g. for Python 2.7.14: ::
+Use the ``module load`` command to load a particular version of python e.g. for Python 3.12.3: ::
 
-  module load python2/2.7.14
+  module load Python/3.12.3-GCCcore-13.3.0
 
 Using conda Python
 ------------------
 
-Conda version ``4.3.30`` is available for both Python 2 and 3 and can be loaded through provided module files: ::
+Miniconda/Anaconda versions are available for Python 3 and can be loaded through provided module files: ::
 
-  python2/anaconda
-  python3/anaconda
+  Anaconda3/2024.02-1
+  Miniconda3/23.10.0-1
 
-Use the ``module load`` command to load a particular Anaconda Python version e.g. Anaconda for Python 3: ::
+Use the ``module load`` command to load a particular Conda Python version e.g. Miniconda for Python 3: ::
 
-  module load python/anaconda3
+  module load Miniconda3/23.10.0-1
 
 
 Using conda Environments
@@ -57,9 +57,9 @@ conda environments. For the documentation on conda environments see
 
 You can load a conda environment with::
 
-    source activate python2
+    source activate python3
 
-where ``python2`` is the name of the environment, and unload one with::
+where ``python3`` is the name of the environment, and unload one with::
 
     source deactivate
 
@@ -83,16 +83,16 @@ system-wide environments will not be reinstalled or copied to your file store,
 they will be ``symlinked``, this reduces the space you need in your ``/home``
 directory to install many different Python environments.
 
-To create a clean environment with just Python 2 and numpy you can run::
+To create a clean environment with just Python 3 and numpy you can run::
 
-    conda create -n mynumpy python=2.7 numpy
+    conda create -n mynumpy python=3.10 numpy
 
-This will download the latest release of Python 2.7 and numpy, and create an
+This will download the latest release of Python 3.10 and numpy, and create an
 environment named ``mynumpy``.
 
 Any version of Python or list of packages can be provided::
 
-    conda create -n myscience python=3.5 numpy=1.8.1 scipy
+    conda create -n myscience python=3.9 numpy=1.8.1 scipy
 
 If you wish to modify an existing environment, such as one of the anaconda
 installations, you can ``clone`` that environment::

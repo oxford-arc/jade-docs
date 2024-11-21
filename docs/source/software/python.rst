@@ -48,10 +48,6 @@ Use the ``module load`` command to load a particular Conda Python version e.g. M
 Using conda Environments
 ########################
 
-There are a small number of environments provided for everyone to use, these are
-the default ``root`` and ``python2`` environments as well as various versions
-of Anaconda for Python 3 and Python 2.
-
 Once the conda module is loaded you have to load or create the desired
 conda environments. For the documentation on conda environments see
 `the conda documentation <http://conda.pydata.org/docs/using/envs.html>`_.

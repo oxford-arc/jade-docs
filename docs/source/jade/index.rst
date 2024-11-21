@@ -8,9 +8,7 @@ Using the JADE@ARC Facility
 
 Users get accounts on the system by following the directions in the **Getting an account** section, on the left.
 
-New users must provide a public SSH key and are given a user ID on JADE.  Using this ID, they will then be able to login to one of the head nodes by using an SSH command like ::
-
-  ssh -l account_name jade2.hartree.stfc.ac.uk
+New users must provide a public SSH key and are given a user ID on JADE.  Using this ID, they will then be able to login to one of the head nodes by using an SSH command.
 
 Further details are in the section **Connecting to the cluster using SSH**.
 
@@ -26,9 +24,9 @@ If not using the installed software, you are also welcome to build your own appl
 
 **Running applications**
 
-Applications can only be run on the compute nodes by submitting jobs to the Slurm batch queuing system.  Examples of Slurm submission scripts are given in the relevant sections for each of the main software packages.
+Applications can only be run on the compute nodes by submitting jobs to the SLURM batch queuing system.  Examples of Slurm submission scripts are given in the relevant sections for each of the main software packages.
 
-It is also possible to obtain an interactive session through Slurm on one of the compute nodes.  This is usually only for code development
+It is also possible to obtain an interactive session through SLURM on one of the compute nodes.  This is usually only for code development
 purposes; submitting batch jobs is the standard way of working.
 
 
@@ -36,16 +34,8 @@ purposes; submitting batch jobs is the standard way of working.
 
 The global file system is accessible from both the head nodes and the compute nodes.  Any files written during the job execution on the compute nodes will be found on the file system after the job has completed.
 
-For information on your disk space usage and remaining quota, use the command ``getquota``
 
-For example::
-
-    getquota
-    Disk quotas for usr abc18-wga20 (uid 1234):
-    Filesystem    used   quota   limit   grace   files   quota   limit   grace
-    /jmain02     44k      0k      0k       -      12       0       0       -
-
-There is also access to local disc space on each compute node, but this access only possible during a Slurm job and once the job is completed the local disc data is removed automatically.  In machine learning applications, for example, this local disc space (provided by fast SSD) may be useful as a staging point for very large training sets.
+There is also access to scratch disc space, but this access only possible during a SLURM job and once the job is completed the local disc data is removed automatically.  In machine learning applications, for example, this scratch space (provided by fast SSD) may be useful as a staging point for very large training sets.
 
 
 
@@ -54,7 +44,6 @@ There is also access to local disc space on each compute node, but this access o
    :glob:
 
    getting-account
-   pi-projectmanager
    connecting
    modules
    scheduler/index

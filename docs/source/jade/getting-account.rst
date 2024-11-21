@@ -9,7 +9,7 @@ Before applying for an account, you should first have an SSH key-pair, and be re
 
 Once you have your public SSH key ready, apply for your JADE@ARC account by going here:
 
-www.arc.ox.ac.uk/jade-user-registration
+`www.arc.ox.ac.uk/jade-user-registration <https://www.arc.ox.ac.uk/jade-user-registration>`_
 
 and providing all of the required information.
 

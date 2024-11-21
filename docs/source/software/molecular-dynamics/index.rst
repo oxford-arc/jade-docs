@@ -8,4 +8,4 @@ Molecular Dynamics
     :maxdepth: 1
     :glob:
 
-    ./*
+    gromacs

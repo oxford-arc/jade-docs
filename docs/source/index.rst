@@ -42,6 +42,5 @@ JADE\@ARC hardware consists of:
 
    jade/index
    software/index
-   cuda
    more_info
    troubleshooting

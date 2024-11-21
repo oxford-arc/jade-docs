@@ -66,19 +66,12 @@ It is possible to list all the available environments with::
 
     conda env list
 
-Provided system-wide are a set of anaconda environments, these will be
-installed with the anaconda version number in the environment name, and never
-modified. They will therefore provide a static base for derivative environments
-or for using directly.
-
 
 Creating an Environment
 #######################
 
 Every user can create their own environments, and packages shared with the
-system-wide environments will not be reinstalled or copied to your file store,
-they will be ``symlinked``, this reduces the space you need in your ``/home``
-directory to install many different Python environments.
+system-wide environments will not be reinstalled or copied to your file store.
 
 To create a clean environment with just Python 3 and numpy you can run::
 

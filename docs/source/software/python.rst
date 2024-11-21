@@ -27,7 +27,8 @@ Standard Python 3 is available to be loaded as a module: ::
   Python/3.12.3-GCCcore-13.3.0
   
 
-Use the ``module load`` command to load a particular version of python e.g. for Python 3.12.3: ::
+Use the ``module load`` command to load a particular version of python 
+e.g. for Python 3.12.3: ::
 
   module load Python/3.12.3-GCCcore-13.3.0
 

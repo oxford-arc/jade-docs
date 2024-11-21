@@ -11,15 +11,9 @@ This is the documentation for the Joint Academic Data science Endeavour
 
 JADE\@ARC is a UK Tier-2 technology pilot resource, funded by EPSRC, owned and
 hosted by the University of Oxford. The hardware was supplied and integrated by
-Lenovo.
-
-A consortium of UK universities, led by the University of Oxford, has been
-awarded £5 million by the Engineering and Physical Sciences Research Council
-(EPSRC) to  continue the world leading research enabled by the Joint Academic
-Data science Endeavour (JADE) service. This forms part of a much larger
-investment by EPSRC in the UK's regional Tier 2 high-performance computing
-facilities, which aim to bridge the gap between institutional and national
-resources.
+Lenovo. This forms part of a much larger investment by EPSRC in the UK's regional
+Tier 2 high-performance computing facilities, which aim to bridge the gap between
+institutional and national resources.
 
 JADE\@ARC Hardware
 =============

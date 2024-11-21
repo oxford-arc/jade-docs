@@ -1,9 +1,7 @@
 .. _getting-started:
 
-Using the JADE Facility
-=======================
-
-The JADE facility consists of 2 head nodes and 63 NVIDIA DGX-MAX-Q servers, each with 8 GPUs and 40 CPU cores.
+Using the JADE@ARC Facility
+===========================
 
 
 **Accounts**
@@ -19,11 +17,11 @@ Further details are in the section **Connecting to the cluster using SSH**.
 
 **Software**
 
-The software packages already installed on JADE comes in two kinds: *standard applications* (primarily Molecular Dynamics) and *containerised applications* (various Machine Learning applications in particular).  These are described further in the **Software on JADE** section on the left.
+The software packages already installed on the system comes in two kinds: *standard applications* and *containerised applications* (various Machine Learning applications in particular).  These are described further in the **Software on JADE** section on the left.
 
 The *module* system is used to control your working environment and the particular version of software which you want to use; details are given in the section **The `module` tool** on the left.
 
-If not using the installed software, you are also welcome to build your own applications.  Codes can be built on the head node, and a number of compilers and MPI library stacks are available via the modules.
+If not using the installed software, you are also welcome to build your own applications.  Codes should be built using an interactive session on a compute node (not on the login nodes), and a number of compilers and MPI library stacks are available via the modules.
 
 
 **Running applications**

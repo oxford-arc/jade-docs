@@ -14,7 +14,10 @@ There are a number of converted AMD Infinity Hub Docker containers on the system
 To run an Apptainer contained application on a compute node interactively::
 
     srun -p short --gres=gpu:4 --pty apptainer run --rocm /apps/common/containers/apptainer/AMD/PyTorch/2.3.0/PyTorch-2.3.0-AMD.sif python PTsanitycheck.py 
-    srun: GPU gres requested, checking settings/requirements...
+
+The output should be as follows::
+
+srun: GPU gres requested, checking settings/requirements...
 
     ############################## 
 

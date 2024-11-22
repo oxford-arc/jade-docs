@@ -1,6 +1,6 @@
 .. _slurm:
 
-The Slurm Scheduler
+The SLURM Scheduler
 ===================
 
 Introduction
@@ -166,35 +166,16 @@ There are three partitions on JADE, which are:
 +----------------+--------------------------------------+
 | Partition name | Description                          |
 +================+======================================+
-| ``big``        | Partition dedicated to jobs that     |
-|                | occupy an entire node, *i.e.* 8 GPUs |
+| ``short``      | Run time of up to 12 hours           |
 +----------------+--------------------------------------+
-| ``small``      | Partition dedicated to jobs that     |
-|                | utilise a single GPUs each.          |
+| ``medium``     | Run-time of up to 2 days             |
 +----------------+--------------------------------------+
-| ``devel``      | Partition dedicated to testing.      |
+| ``long``       | Run-time of up to 30 days            |
 +----------------+--------------------------------------+
 
-The partitions have the following limits for submitted jobs:
+The default partition is ``short``.  Information on these partitions can be obtained with the commands ``sinfo -a`` or ``scontrol show partition=short``.
 
-+----------------+---------------------+-------------------+-------------------+
-| Partition name | Partition Size      |Job Walltime limit | Running Job limit |
-+================+=====================+===================+===================+
-| ``big``        | 30 nodes            | 24 hours          | 5 Jobs            |
-|                |                     |                   |                   |
-+----------------+---------------------+-------------------+-------------------+
-| ``small``      | 30 nodes            | 6 days            | 8 Jobs            |
-|                |                     |                   |                   |
-+----------------+---------------------+-------------------+-------------------+
-| ``devel``      | 3 nodes             | 1 hour            | 1 Job             |
-+----------------+---------------------+-------------------+-------------------+
-
-
-The default partition is ``big``.  Information on these partitions can be obtained with the commands ``sinfo -a`` or ``scontrol show partition=small``.
-
-Submitting to a particular partition can be done by specifying the partition as an argument to ``sbatch``, *e.g.* ``sbatch -p devel sub.sh``, or by directly supplying a request for that partition in the submission script, *e.g.* ``#SBATCH --partition=devel``.
-
-The ``devel`` partition should be used to check your submission script works correctly and that your application starts to execute without errors.
+Submitting to a particular partition can be done by specifying the partition as an argument to ``sbatch``, *e.g.* ``sbatch -p short sub.sh``, or by directly supplying a request for that partition in the submission script, *e.g.* ``#SBATCH --partition=short``.
 
 Upon reaching the per user running job limit for a partition, any further jobs submitted to that same partition by the same user will be shown as state Pending (PD) with the Reason set as QOSMaxJobsPerUserLimit.
 
@@ -207,9 +188,9 @@ Monitoring jobs with the command squeue
 The command ``squeue`` prints the list of current jobs.  The list looks something like this: ::
 
   | JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
-  |  2497     devel     srun      bob  R       0:07      1 dgk119
-  |  2499       big     test1    mary  R       0:22      4 dgk[201,204]
-  |  2511     small     test2   steve PD       0:00      4 (Resources)
+  |  2497     short     srun  jade1001 R       0:07      1 jade-g001
+  |  2499    medium     test1 jade2001 R       0:22      2 jade-[002,003]
+  |  2511      long     test2 jade1001 PD      0:00      3 (Resources)
 
 The first column gives the job ID, the second the partition where the job was submitted, the third the name of the job (specified by the user in the submission script) and the fourth the user ID of the job owner.  The fifth is the status of the job (**R** = running, **PD** = pending, **CA** = cancelled, **CF** = configuring, **CG** = completing, **CD** = completed, **F** = failed). The sixth column gives the elapsed time for each particular job.  Finally, there are the number of nodes requested and the nodelist where the job is running (or the cause that it is not running).
 

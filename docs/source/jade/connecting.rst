@@ -116,6 +116,7 @@ Here you need to replace ``$USER`` with your username (e.g. ``jade1234``).
     When first connecting, SSH will usually present you with the hosts' public SSH key and ask to confirm it. This is to allow SSH to verify the host you are connecting to; should that key change, you will be warned by SSH as this could potentially indicate a man-in-the-middle attack. 
 
     The host keys for jade-login.arc.ox.ac.uk for various key algorithms are:
+    
     .. csv-table:: jade-login.arc.ox.ac.uk SSH keys
        :file: jade_ssh_keys.csv
        :widths: 30, 70

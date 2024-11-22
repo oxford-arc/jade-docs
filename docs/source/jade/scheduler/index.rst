@@ -8,7 +8,7 @@ Introduction
 
 Running software on the JADE system is accomplished with batch jobs, *i.e.* in an unattended, non-interactive manner.  Typically a user logs in to the JADE login nodes, prepares a job script and submits it to the job queue.
 
-Jobs on JADE are managed by the `Slurm batch system <https://slurm.schedmd.com>`_ , which is in charge of:
+Jobs on JADE are managed by the `SLURM batch system <https://slurm.schedmd.com>`_ , which is in charge of:
 
 * allocating the computer resources requested for the job,
 * running the job and
@@ -21,7 +21,7 @@ Running a job involves, at the minimum, the following steps
 
 This guide describes basic job submission and monitoring for Slurm.  The generic topics in the guide are:
 
-* the main Slurm commands,
+* the main SLURM commands,
 * preparing a submission script,
 * submitting a job to the queue,
 * monitoring a job execution,
@@ -30,7 +30,7 @@ This guide describes basic job submission and monitoring for Slurm.  The generic
 
 Additionally, the following topics specific to JADE are covered (*under construction*)
 
-* slurm partitions,
+* SLURM partitions,
 * using fast local storage and
 * controlling affinity.
 
@@ -62,13 +62,13 @@ The table below gives a short description of the Slurm commands that are likely 
 |             | priority order                                  |
 +-------------+-------------------------------------------------+
 
-All Slurm commands have extensive help through their man pages *e.g.*::
+All SLURM commands have extensive help through their man pages *e.g.*::
 
   man sbatch
 
 shows you the help pages for the ``sbatch`` command.
 
-In addition to the above commands, the table below gives two more commands that can be used in special cases, *e.g.* to obtain an interactive session, such as used in the Machine Learning examples.  The commands are
+In addition to the above commands, the table below gives two more commands that can be used in special cases, *e.g.* to obtain an interactive session. The commands are
 
 +-------------+-------------------------------------------------+
 | Command     | Description                                     |
@@ -129,7 +129,7 @@ Supposing the application run is called ``myCode`` and takes no command line arg
 
 The script starts with ``#!/bin/bash`` (also called a shebang), which makes the submission script a GNU bash script.
 
-The script continues with a series of lines starting with ``#``, which represent bash script comments.  For Slurm, the lines starting with ``#SBATCH`` are directives that request job scheduling resources.  (Note: it is important that you put all the directives at the top of a script, before any other commands; any ``#SBATCH`` directive coming after a bash script command is ignored!)
+The script continues with a series of lines starting with ``#``, which represent bash script comments.  For SLURM, the lines starting with ``#SBATCH`` are directives that request job scheduling resources.  (Note: it is important that you put all the directives at the top of a script, before any other commands; any ``#SBATCH`` directive coming after a bash script command is ignored!)
 
 The resource request ``#SBATCH --nodes=n`` determines how many compute nodes a job are allocated by the scheduler; only 1 node is allocated for this job.
 
@@ -159,7 +159,7 @@ Once the job starts to run you will see files with names such as ``slurm-1234.ou
 Job partitions on JADE
 ----------------------
 
-Partitions are Slurm entities defined by the system administrators that allow the separation and control of jobs according to their characteristics.  Each partition has a a number of compute nodes associated with it, as well as properties that control job placement.  A job can be submitted to be executed by a particular partition, and if no partition is specified, the default one is selected.
+Partitions are SLURM entities defined by the system administrators that allow the separation and control of jobs according to their characteristics.  Each partition may have a number of compute nodes associated with it, as well as properties that control job placement.  A job can be submitted to be executed by a particular partition, and if no partition is specified, the default one is selected.
 
 There are three partitions on JADE, which are:
 
@@ -213,7 +213,7 @@ Use the ``scancel`` command to delete a job, *e.g.* ``scancel 1121`` to delete j
 Environment variables
 ---------------------
 
-At the time a job is launched into execution, Slurm defines multiple environment variables, which can be used from within the submission script to define the correct workflow of the job.  A few useful environment variables are the following:
+At the time a job is launched into execution, SLURM defines multiple environment variables, which can be used from within the submission script to define the correct workflow of the job.  A few useful environment variables are the following:
 
 * ``SLURM_SUBMIT_DIR``, which points to the directory where the sbatch command is issued;
 * ``SLURM_JOB_NODELIST``, which returns the list of nodes allocated to the job;
@@ -227,12 +227,12 @@ In most cases, ``SLURM_SUBMIT_DIR`` does not have to be used, as the job lands b
 
   myApp &> $SLURM_JOB_ID.out
 
-runs the application myApp and redirects the standard output (and error) to a file whose name is given by the job ID.  *Note*: the job ID is a number assigned by Slurm and differs from the character string name given to the job in the submission script by the user.
+runs the application ``myApp`` and redirects the standard output (and error) to a file whose name is given by the job ID.  *Note*: the job ID is a number assigned by SLURM and differs from the character string name given to the job in the submission script by the user.
 
 
 Job arrays
 ----------
-Job arrays is a useful mechanism for submitting and managing collections of similar jobs quickly and easily; multiple job are submitted to the queue using a single ``sbatch`` command and a single submission script.
+Job arrays are a useful mechanism for submitting and managing collections of similar jobs quickly and easily; multiple job are submitted to the queue using a single ``sbatch`` command and a single submission script.
 
 Here are a few examples:::
 

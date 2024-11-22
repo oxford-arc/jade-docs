@@ -5,7 +5,7 @@ Connecting to the cluster using SSH
 
 To log onto the JADE cluster you must use `SSH <https://en.wikipedia.org/wiki/Secure_Shell>`_, which is a common way of remotely logging in to computers running the GNU/Linux operating system.
 
-To do this, you need to have a SSH *client* program installed on your machine. macOS and GNU/Linux come with a command-line (text-only) SSH client pre-installed.  On Windows there are various graphical SSH clients you can use, including *MobaXTerm*.
+To do this, you need to have a SSH *client* program installed on your machine. GNU/Linux, macOS and recent Windows versions come with a command-line (text-only) SSH client pre-installed.  For Windows there are also various graphical SSH clients you can use, including *MobaXTerm*.
 
 .. _connecting-ssh-client-windows:
 

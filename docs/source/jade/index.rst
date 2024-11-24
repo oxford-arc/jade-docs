@@ -1,6 +1,6 @@
 .. _getting-started:
 
-Using the JADE@ARC Facility
+Using the JADE\@ARC Facility
 ===========================
 
 

@@ -6,7 +6,7 @@ import sys
 
 # General information about the project.
 project = u'JADE@ARC'
-copyright = u'2017-2024, JADE Tier 2 Centre'
+copyright = u'2017–2024, JADE Tier 2 Centre'
 author = u'The ARC Team'
 
 version = u''

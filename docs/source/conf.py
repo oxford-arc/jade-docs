@@ -73,7 +73,7 @@ if on_rtd:
 
 # (Optional) Logo. Should be small enough to fit the navbar (ideally 24x24).
 # Path should be relative to the ``_static`` files directory.
-html_logo = 'images/JADE_Logo.svg'
+html_logo = 'images/JADE_2.5_Logo.svg'
 
 html_static_path = ['_static']
 favicons = [

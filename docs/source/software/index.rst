@@ -93,6 +93,7 @@ The following are the available applications, libraries and development tools on
     :maxdepth: 2
     :glob:
 
+    machine-learning/index
     molecular-dynamics/index
     python
     git

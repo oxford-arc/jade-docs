@@ -32,10 +32,12 @@ purposes; submitting batch jobs is the standard way of working.
 
 **Storage**
 
-The global file system is accessible from both the head nodes and the compute nodes.  Any files written during the job execution on the compute nodes will be found on the file system after the job has completed.
+The global file system is accessible from both the head nodes and the compute nodes.  Any files written during the job execution on the compute nodes will be found on the file system after the job has completed. 
+
+Large data storage should be placed in each user's ``$DATA`` location. Home directories have very small storage quotas so any large datasets should go here.
 
 
-There is also access to scratch disc space, but this access only possible during a SLURM job and once the job is completed the local disc data is removed automatically.  In machine learning applications, for example, this scratch space (provided by fast SSD) may be useful as a staging point for very large training sets.
+There is also access to scratch disc space, but this access only possible during a SLURM job at ``/scratch`` and once the job is completed the local disc data is removed automatically.  In machine learning applications, for example, this scratch space (provided by fast SSD) may be useful as a staging point for very large training sets. 
 
 
 
